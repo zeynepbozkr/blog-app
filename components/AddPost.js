@@ -105,15 +105,16 @@ const App = () => {
                 <Form.Control
                   onChange={handleChange}
                   type="text"
+                  id="svd"
                   placeholder="Başlık giriniz"
-                  value={values.title}
-                  as="textarea"
+                  name="title"
+                  as="input"
                 />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Yorum </Form.Label>
                 <Form.Control
-                  value={values.content}
+                  name="content"
                   placeholder="içerik giriniz"
                   onChange={handleChange}
                   as="textarea"
@@ -128,7 +129,7 @@ const App = () => {
                     onChange={(e) => {
                       uploadImage(e);
                     }}
-                    value={values.file}
+                    name={values.file}
                   />
                 </Form.Group>
                 <Button
